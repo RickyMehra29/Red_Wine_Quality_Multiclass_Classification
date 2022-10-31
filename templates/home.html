@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body style="background-color:rgba(255,200,100)";>
+ <div class="login">
+	<h1 style="text-align: center; background-color:rgba(177,18,38);" >Red Wine Quality prediction Model using ML Classification</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+      <table>
+        <form action="{{ url_for('predict_api')}}"method="post">
+            <tr>
+                <td>
+                    <label style="font-weight: bold;">
+                            Fixed Acidity:
+                    </label>
+                </td>
+                <td><input type="text" name="fixed acidity" placeholder="fixed acidity" required="required" /><br>
+                </td>
+            </tr>
+
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Volatile Acidity:
+                  </label>
+              </td>
+              <td><input type="text" name="volatile acidity" placeholder="volatile acidity" required="required" /><br>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Citric Acid:
+                  </label>
+              </td>
+              <td><input type="text" name="citric acid" placeholder="citric acid" required="required" /><br>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Residual Sugar:
+                  </label>
+              </td>
+              <td><input type="text" name="residual sugar" placeholder="residual sugar" required="required" /><br>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Chlorides:
+                  </label>
+              </td>
+              <td><input type="text" name="chlorides" placeholder="chlorides" required="required" /><br>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Free Sulfur Dioxide:
+                  </label>
+              </td>
+              <td><input type="text" name="free sulfur dioxide" placeholder="free sulfur dioxide" required="required" /><br>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Total Sulfur Dioxide:
+                  </label>
+              </td>
+              <td><input type="text" name="toal sulfur dioxide" placeholder="toal sulfur dioxide" required="required" /><br>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Density:
+                  </label>
+              </td>
+              <td><input type="text" name="density" placeholder="density" required="required" /><br>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    pH:
+                  </label>
+              </td>
+              <td><input type="text" name="pH" placeholder="pH" required="required" /><br>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Sulphates:
+                  </label>
+              </td>
+              <td><input type="text" name="sulphates" placeholder="sulphates" required="required" /><br>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                  <label style="font-weight: bold;">
+                    Alcohol:
+                  </label>
+              </td>
+              <td><input type="text" name="alcohol" placeholder="alcohol" required="required" /><br>
+              </td>
+            </tr>
+      </table>
+      
+      <br><br>     
+
+        <button  style="font-weight: bold;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+ </div>
+ {{output_text}}
+
+ <br>
+ <br>
+ 
+
+</body>
+</html>
